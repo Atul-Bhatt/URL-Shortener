@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<header>
-</header>
+<head>
+    <meta charset="utf-8">
+    <title>Shorten Your URL</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
 <body>
-    <h1>Welcome to URL Shortener!</h1>
-    <form action='short-url'>
-        <label>URL</label>
-        <input type="url" name="url" required>
-        <label>Short Name</label>
-        <input type="text" name="code" required>
+
+{% for message in get_flashed_messages() %}
+<h3>{{ message }}</h3>
+{% endfor %}
+
+    <form class="box" action="short-url" method="post">
+        <h1>Teeny URL</h1>
+        <input type="url" name="url" placeholder="URL" required>
+        <input type="text" name="code" placeholder="Short Name" required>
         <input type="submit" value="Go!">
     </form>
+
+
 </body>
 </html>
