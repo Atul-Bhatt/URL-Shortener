@@ -62,3 +62,30 @@ body {
 .box input[type="submit"]:hover {
   background: #2ecc71;
 }
+
+h3 {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: absolute;
+  top: 20%;
+  left: 43%;
+}
+
+h2 {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  color: white;
+}
+
+ul {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  color: white;
+}
+
+a {
+  color: white;
+}

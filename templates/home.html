@@ -18,6 +18,14 @@
         <input type="submit" value="Go!">
     </form>
 
+    <h2>Short names you have created</h2>
+    {% if codes %}
+    <ul>
+            {% for code in codes %}
+            <a href="{{ url_for('redirect_route', code=code)}}"><li>{{ code }}</li></a>
+            {% endfor %}
+    </ul>
+    {% endif %}
 
 </body>
 </html>
